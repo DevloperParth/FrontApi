@@ -1,0 +1,27 @@
+<table border="1">
+  <thead>
+  <tr>
+      <th>HEAD1</th>
+      <th>HEAD2</th>
+      <th>HEAD3</th>
+  </tr>
+  </thead>
+  <tr>
+      <td class="hiddenField">row1 col1</td>
+      <td>row1 col2</td>    
+      <td><button class="seeHidden">btn1</button></td>
+  </tr>
+      <tr>
+      <td class="hiddenField">row2 col1</td>
+      <td>row2 col2</td>
+      <td><button class="seeHidden">btn2</button></td>
+  </tr>
+</table>
+<script>
+  $(".seeHidden").click(function(){
+    var hiddenField = $(this).parent()
+                             .siblings("td.hiddenField")
+                             .html();
+    alert(hiddenField);
+});
+</script>
